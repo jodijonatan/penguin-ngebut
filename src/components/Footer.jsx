@@ -6,8 +6,7 @@
 //       {" "}
 //       <div className="container mx-auto text-center">
 //         <p>
-//           &copy; {new Date().getFullYear()} Jodi Jonatan - Software Developer.
-//           All rights reserved.
+//           &copy; {new Date().getFullYear()} PENGUIN NGEBUT
 //         </p>
 //       </div>
 //     </footer>
@@ -26,7 +25,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-white">JO DEV</h2>
+          <h2 className="text-2xl font-bold text-white">PENGUIN NGEBUT</h2>
           <p className="mt-3 text-sm text-gray-400">
             Developer website modern, responsif, dan interaktif untuk kebutuhan
             digitalmu.
@@ -118,8 +117,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} Jodi Jonatan - Software Developer |
-        Designer
+        &copy; {new Date().getFullYear()} PENGUIN NGEBUT
       </div>
     </footer>
   );
