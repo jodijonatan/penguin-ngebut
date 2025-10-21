@@ -53,12 +53,6 @@ const Navbar = () => {
             About
           </a>
           <a
-            href="#skills"
-            className="text-[#34495E] hover:text-[#1F618D] transition duration-300"
-          >
-            Skills
-          </a>
-          <a
             href="#portfolio"
             className="text-[#34495E] hover:text-[#1F618D] transition duration-300"
           >
@@ -112,27 +106,6 @@ const Navbar = () => {
             className="block px-6 py-2 text-[#34495E] hover:bg-[#D4F6FF] hover:text-[#2C3E50]"
           >
             About
-          </a>
-          <a
-            href="#skills"
-            onClick={() => setIsOpen(false)}
-            className="block px-6 py-2 text-[#34495E] hover:bg-[#D4F6FF] hover:text-[#2C3E50]"
-          >
-            Skills
-          </a>
-          <a
-            href="#portfolio"
-            onClick={() => setIsOpen(false)}
-            className="block px-6 py-2 text-[#34495E] hover:bg-[#D4F6FF] hover:text-[#2C3E50]"
-          >
-            Project
-          </a>
-          <a
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="block px-6 py-2 text-[#34495E] hover:bg-[#D4F6FF] hover:text-[#2C3E50]"
-          >
-            Contact
           </a>
         </div>
       )}
