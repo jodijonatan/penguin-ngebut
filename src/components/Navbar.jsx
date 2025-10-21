@@ -1,56 +1,93 @@
 import React, { useEffect, useRef, useState } from "react";
-import AOS from "aos";
+import { Car, Menu, X } from "lucide-react"; // Menggunakan ikon dari lucide-react
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // State baru untuk mendeteksi scroll
   const navRef = useRef(null);
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+  // Efek untuk menutup menu saat klik di luar
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
+  // Efek untuk mendeteksi scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      // Atur scrolled ke true jika posisi scroll lebih dari 50px
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]); // Dependensi [scrolled] untuk menghindari loop
+
+  // Kelas Tailwind berdasarkan status scroll
+  const navbarClasses = `
+    fixed w-full z-50 transition-all duration-500 ease-in-out
+    ${
+      scrolled
+        ? "bg-blue-900/90 shadow-2xl backdrop-blur-md" // Background solid/blur saat discroll
+        : "bg-transparent shadow-none" // Transparent saat di atas
+    }
+  `;
+
+  // Kelas untuk teks saat scroll, agar tetap kontras
+  const textClasses = scrolled ? "text-white" : "text-blue-900 md:text-white";
+  const logoClasses = scrolled ? "text-sky-400" : "text-white md:text-sky-400";
+
   return (
-    <nav
-      ref={navRef}
-      className="bg-[#ECF0F1] shadow-lg fixed w-full z-50"
-      data-aos="fade-down"
-    >
+    <nav ref={navRef} className={navbarClasses}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <a
-            href="#"
-            className="text-[#2C3E50] text-2xl font-bold hover:text-[#1F618D]"
+            href="#home"
+            className={`flex items-center text-2xl font-bold transition duration-300 ${logoClasses}`}
           >
-            Penguin Ngebut
+            <Car className="w-6 h-6 mr-2" />
+            PENGUIN RESING
           </a>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-8">
           <a
             href="#home"
-            className="text-[#34495E] hover:text-[#1F618D] transition duration-300"
+            className={`text-lg font-medium hover:text-sky-400 transition duration-300 ${textClasses}`}
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-[#34495E] hover:text-[#1F618D] transition duration-300"
+            className={`text-lg font-medium hover:text-sky-400 transition duration-300 ${textClasses}`}
           >
             About
+          </a>
+          <a
+            href="#member"
+            className={`text-lg font-medium hover:text-sky-400 transition duration-300 ${textClasses}`}
+          >
+            Member
+          </a>
+          <a
+            href="#gallery"
+            className={`text-lg font-medium hover:text-sky-400 transition duration-300 ${textClasses}`}
+          >
+            Gallery
           </a>
         </div>
 
@@ -58,43 +95,31 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[#34495E] focus:outline-none"
+            className={`focus:outline-none ${textClasses}`}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              ></path>
-            </svg>
+            {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Dropdown) */}
       {isOpen && (
-        <div className="md:hidden bg-[#ECF0F1] pb-4">
-          <a
-            href="#home"
-            onClick={() => setIsOpen(false)}
-            className="block px-6 py-2 text-[#34495E] hover:bg-[#D4F6FF] hover:text-[#2C3E50]"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            onClick={() => setIsOpen(false)}
-            className="block px-6 py-2 text-[#34495E] hover:bg-[#D4F6FF] hover:text-[#2C3E50]"
-          >
-            About
-          </a>
+        <div className="md:hidden bg-blue-900/95 pb-4 transition-all duration-300">
+          {[
+            { href: "#home", label: "Home" },
+            { href: "#about", label: "About" },
+            { href: "#member", label: "Member" },
+            { href: "#gallery", label: "Gallery" },
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="block px-6 py-3 text-white hover:bg-sky-700/50 transition duration-300 text-lg font-medium"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       )}
     </nav>
