@@ -52,18 +52,6 @@ const Navbar = () => {
           >
             About
           </a>
-          <a
-            href="#portfolio"
-            className="text-[#34495E] hover:text-[#1F618D] transition duration-300"
-          >
-            Project
-          </a>
-          <a
-            href="#contact"
-            className="text-[#34495E] hover:text-[#1F618D] transition duration-300"
-          >
-            Contact
-          </a>
         </div>
 
         {/* Mobile Menu Button */}

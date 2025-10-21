@@ -46,21 +46,6 @@ const Footer = () => {
                 About
               </a>
             </li>
-            <li>
-              <a href="/#skills" className="hover:text-white transition">
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="/#portfolio" className="hover:text-white transition">
-                Project
-              </a>
-            </li>
-            <li>
-              <a href="/#contact" className="hover:text-white transition">
-                Contact
-              </a>
-            </li>
           </ul>
         </div>
 
