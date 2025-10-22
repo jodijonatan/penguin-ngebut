@@ -1,4 +1,3 @@
-// Data Dummy Foto Galeri (tetap sama)
 const galleryItems = [
   {
     id: 1,
@@ -29,7 +28,6 @@ export default function Gallery() {
           {galleryItems.map((item) => (
             <div
               key={item.id}
-              // Hanya menyisakan efek hover pada kartu
               className="group relative bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 ease-in-out cursor-pointer"
             >
               {/* Gambar */}
@@ -37,12 +35,10 @@ export default function Gallery() {
                 <img
                   src={item.src}
                   alt={item.alt}
-                  // Menghilangkan kelas group-hover:opacity-80
                   className="w-full h-full object-cover transition duration-500"
                 />
               </div>
 
-              {/* Caption di Bawah (Tetap ditampilkan) */}
               <div className="p-4 text-center">
                 <p className="text-base text-gray-700 font-medium">
                   {item.caption}

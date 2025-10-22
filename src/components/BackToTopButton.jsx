@@ -36,7 +36,7 @@ const BackToTopButton = () => {
         ? // Saat isVisible TRUE (Animasi Masuk/Tetap Ada)
           "opacity-100 translate-y-0 pointer-events-auto"
         : // Saat isVisible FALSE (Animasi Keluar/Menghilang)
-          "opacity-0 translate-y-10 pointer-events-none" // Geser ke bawah (y-10) dan transparan
+          "opacity-0 translate-y-10 pointer-events-none"
     }
   `;
 

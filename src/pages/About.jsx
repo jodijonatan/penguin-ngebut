@@ -1,6 +1,5 @@
-import { Zap, Users, Compass } from "lucide-react"; // Ikon untuk detail proyek
+import { Zap, Users, Compass } from "lucide-react";
 
-// Data dummy untuk detail proyek
 const projectDetails = [
   {
     icon: Zap,
@@ -27,10 +26,7 @@ const projectDetails = [
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="py-20 md:py-32 bg-gray-50 text-gray-800" // Latar belakang netral agar konten biru menonjol
-    >
+    <section id="about" className="py-20 md:py-32 bg-gray-50 text-gray-800">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Bagian Judul dan Deskripsi Utama */}
         <div className="text-center mb-16">
@@ -79,13 +75,12 @@ export default function About() {
             </ul>
           </div>
 
-          {/* Kolom Kanan: Visual Dummy (Ganti dengan gambar mobil/tim Anda) */}
+          {/* Kolom Kanan */}
           <div className="md:w-1/2 p-6 bg-sky-100 rounded-xl shadow-2xl transform transition duration-500 ease-in-out">
-            {/* Mengganti div placeholder dengan tag <img> */}
             <img
-              src="/background.png" // GANTI dengan PATH FILE gambar Anda yang sebenarnya
+              src="/background.png"
               alt="Foto/Skema Prototype Mobil Remote Control"
-              className="w-full h-64 object-cover rounded-lg shadow-lg" // w-full dan h-64 mempertahankan dimensi dan object-cover memastikan gambar terisi penuh
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
             <p className="mt-4 text-center text-sm text-gray-600 italic">
               Model Remote Control Car - Prototype V1.0

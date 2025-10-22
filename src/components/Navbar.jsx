@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Car, Menu, X } from "lucide-react"; // Menggunakan ikon dari lucide-react
+import { Car, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false); // State baru untuk mendeteksi scroll
+  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);
 
   // Efek untuk menutup menu saat klik di luar
@@ -41,8 +41,8 @@ const Navbar = () => {
     fixed w-full z-50 transition-all duration-500 ease-in-out
     ${
       scrolled
-        ? "bg-blue-900/90 shadow-2xl backdrop-blur-md" // Background solid/blur saat discroll
-        : "bg-transparent shadow-none" // Transparent saat di atas
+        ? "bg-blue-900/90 shadow-2xl backdrop-blur-md"
+        : "bg-transparent shadow-none"
     }
   `;
 

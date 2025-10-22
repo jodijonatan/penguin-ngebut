@@ -1,6 +1,3 @@
-import { Github, Linkedin, Mail } from "lucide-react"; // Ikon media sosial
-
-// Data Anggota Tim (tetap sama)
 const teamMembers = [
   {
     name: "Brema Akmal",
@@ -50,7 +47,6 @@ const MemberCard = ({ member }) => (
   <div className="bg-white rounded-xl shadow-2xl p-6 text-center border-t-4 border-sky-500 transform transition duration-500 ease-in-out hover:-translate-y-2 cursor-default">
     {/* Foto Anggota */}
     <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-sky-300 shadow-md">
-      {/* BAGIAN INI TELAH DIUBAH */}
       <img
         src={member.image}
         alt={`Foto ${member.name}`}
@@ -58,11 +54,9 @@ const MemberCard = ({ member }) => (
       />
     </div>
 
-    {/* Nama dan Jabatan */}
     <h3 className="text-2xl font-bold text-blue-900 mb-1">{member.name}</h3>
     <p className="text-lg font-semibold text-sky-600 mb-4">{member.role}</p>
 
-    {/* Tugas */}
     <div className="text-left mb-4">
       <p className="font-bold text-gray-700 mb-2 border-b pb-1 border-gray-200">
         Tanggung Jawab Utama:
@@ -83,7 +77,6 @@ export default function Member() {
   return (
     <section id="member" className="py-20 md:py-32 bg-blue-50 text-gray-800">
       <div className="container mx-auto px-4 max-w-6xl">
-        {/* Bagian Judul */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-4">
             Tim di Balik <span className="text-sky-500">Inovasi</span>

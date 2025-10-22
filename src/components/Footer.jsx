@@ -1,4 +1,4 @@
-import { Car, Github, Mail, Linkedin, MapPin } from "lucide-react"; // Ikon
+import { Car, Github, Mail, Linkedin, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (

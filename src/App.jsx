@@ -21,7 +21,7 @@ function App() {
         <Route
           path="/"
           element={
-            // layout untuk halaman utama
+            // layout halaman utama
             <>
               <Navbar />
               <main>
