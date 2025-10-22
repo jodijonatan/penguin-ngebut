@@ -47,7 +47,7 @@ const teamMembers = [
 
 // Komponen Kartu Anggota Tim
 const MemberCard = ({ member }) => (
-  <div className="bg-white rounded-xl shadow-2xl p-6 text-center border-t-4 border-sky-500 transform transition duration-500 ease-in-out">
+  <div className="bg-white rounded-xl shadow-2xl p-6 text-center border-t-4 border-sky-500 transform transition duration-500 ease-in-out hover:-translate-y-2 cursor-default">
     {/* Foto Anggota */}
     <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-sky-300 shadow-md">
       {/* BAGIAN INI TELAH DIUBAH */}
@@ -94,8 +94,7 @@ export default function Member() {
           </p>
         </div>
 
-        {/* Daftar Anggota Tim (Grid Responsif) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 hover:-translate-y-2">
           {teamMembers.map((member, index) => (
             <MemberCard key={index} member={member} />
           ))}
