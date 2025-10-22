@@ -19,7 +19,7 @@ export default function Gallery() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Dokumentasi proses dari konsep, perakitan hardware, hingga sesi
-            <span className="font-semibold">coding</span> intensif untuk proyek{" "}
+            <span className="font-semibold"> coding</span> intensif untuk proyek{" "}
             <span className="font-semibold">PENGUIN RESING</span>.
           </p>
         </div>
