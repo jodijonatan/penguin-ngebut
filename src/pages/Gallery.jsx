@@ -5,6 +5,36 @@ const galleryItems = [
     alt: "All Tim",
     caption: "Momen mendesain banner",
   },
+  {
+    id: 2,
+    src: "/perancangan-mobil2.jpeg",
+    alt: "Perancangan Mobil",
+    caption: "Perancangan Mobil",
+  },
+  {
+    id: 3,
+    src: "/perancangan-skema.jpeg",
+    alt: "Perancangan Skema",
+    caption: "Perancangan Skema",
+  },
+  {
+    id: 4,
+    src: "/model-mobil.jpeg",
+    alt: "Model Mobil",
+    caption: "Model Mobil",
+  },
+  {
+    id: 5,
+    src: "/website-development.jpeg",
+    alt: "Website Development",
+    caption: "Website Development",
+  },
+  {
+    id: 6,
+    src: "/perancangan-mobil7.jpeg",
+    alt: "Perancangan Mobil",
+    caption: "Perancangan Mobil",
+  },
 ];
 
 export default function Gallery() {
@@ -28,14 +58,14 @@ export default function Gallery() {
           {galleryItems.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 ease-in-out cursor-pointer"
+              className="group cursor-pointer hover:shadow-2xl relative bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 ease-in-out"
             >
               {/* Gambar */}
               <div className="h-64 overflow-hidden">
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-full object-cover transition duration-500"
+                  className="group-hover:scale-110 w-full h-full object-cover transition duration-500"
                 />
               </div>
 
