@@ -3,25 +3,26 @@ const galleryItems = [
     id: 1,
     src: "/alltim.jpeg",
     alt: "All Tim",
-    caption: "Momen mendesain banner",
+    caption: "mendesain banner",
   },
   {
     id: 2,
     src: "/perancangan-mobil2.jpeg",
     alt: "Perancangan Mobil",
-    caption: "Perancangan Mobil",
+    caption: "Perancangan komponen hardware",
   },
-  {
-    id: 3,
-    src: "/perancangan-skema.jpeg",
-    alt: "Perancangan Skema",
-    caption: "Perancangan Skema",
-  },
+
   {
     id: 4,
     src: "/model-mobil.jpeg",
     alt: "Model Mobil",
     caption: "Model Mobil",
+  },
+  {
+    id: 3,
+    src: "/perancangan-skema.jpeg",
+    alt: "Perancangan Skema",
+    caption: "Prototyping",
   },
   {
     id: 5,
