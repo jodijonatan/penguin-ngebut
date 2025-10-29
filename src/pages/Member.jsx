@@ -3,13 +3,13 @@ const teamMembers = [
     name: "Brema Akmal",
     role: "IoT Project Manager",
     tasks: ["Koordinasi Proyek", "IoT Hardware Engineer"],
-    image: "/brema.png",
+    image: "/team/brema.png",
   },
   {
     name: "Harry Hutapea",
     role: "Graphic Designer",
     tasks: ["Banner Design", "Inisiator"],
-    image: "/harry.jpeg",
+    image: "/team/harry.jpeg",
   },
   {
     name: "Jodi Jonatan",
@@ -17,28 +17,33 @@ const teamMembers = [
     tasks: [
       "Banner Design",
       "Website Development",
-      "documentalist",
+      "Documentalist",
       "Inisiator",
     ],
-    image: "/jodi.jpeg",
+    image: "/team/jodi.jpeg",
   },
   {
     name: "Luthfii Alfayyadh",
     role: "IoT Hardware Engineer",
-    tasks: ["IoT Hardware Engineer", "Banner Design"],
-    image: "/luthfi.jpeg",
+    tasks: ["IoT Hardware Engineer", "Banner Design", "Scheme Designer"],
+    image: "/team/luthfi.jpeg",
   },
   {
     name: "Maleakhi Christian",
     role: "Digital Specialist",
-    tasks: ["Banner Design", "documentalist", "IoT Hardware Engineer"],
-    image: "/maleakhi.jpeg",
+    tasks: [
+      "Banner Design",
+      "Documentalist",
+      "IoT Hardware Engineer",
+      "Scheme Designer",
+    ],
+    image: "/team/maleakhi.jpeg",
   },
   {
     name: "Vorgiano Pandiangan",
     role: "IoT Hardware Engineer",
     tasks: ["IoT Hardware Engineer"],
-    image: "/vorgiano.jpeg",
+    image: "/team/vorgiano.jpeg",
   },
 ];
 
@@ -63,8 +68,8 @@ const MemberCard = ({ member }) => (
       </p>
       <ul className="text-sm text-gray-600 space-y-1">
         {member.tasks.map((task, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-sky-500 mr-2 mt-1">•</span>
+          <li key={index} className="flex items-center">
+            <span className="text-sky-500 mr-2">•</span>
             <span>{task}</span>
           </li>
         ))}

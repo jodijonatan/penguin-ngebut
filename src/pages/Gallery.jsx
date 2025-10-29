@@ -1,38 +1,38 @@
 const galleryItems = [
   {
     id: 1,
-    src: "/alltim.jpeg",
+    src: "/desain-banner/desain.jpeg",
     alt: "All Tim",
     caption: "mendesain banner",
   },
   {
     id: 2,
-    src: "/perancangan-mobil2.jpeg",
+    src: "/perancangan-mobil/perancangan-mobil2.jpeg",
     alt: "Perancangan Mobil",
     caption: "Perancangan komponen hardware",
   },
 
   {
     id: 4,
-    src: "/model-mobil.jpeg",
+    src: "/perancangan-mobil/model-mobil.jpeg",
     alt: "Model Mobil",
     caption: "Model Mobil",
   },
   {
     id: 3,
-    src: "/perancangan-skema.jpeg",
+    src: "/perancangan-skema/perancangan-skema.jpeg",
     alt: "Perancangan Skema",
     caption: "Prototyping",
   },
   {
     id: 5,
-    src: "/website-development.jpeg",
+    src: "/website-development/website-development.jpeg",
     alt: "Website Development",
     caption: "Website Development",
   },
   {
     id: 6,
-    src: "/perancangan-mobil7.jpeg",
+    src: "/perancangan-mobil/perancangan-mobil7.jpeg",
     alt: "Perancangan Mobil",
     caption: "Perancangan Mobil",
   },
