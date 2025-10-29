@@ -41,13 +41,13 @@ const Navbar = () => {
     fixed w-full z-50 transition-all duration-500 ease-in-out
     ${
       scrolled
-        ? "bg-blue-900/90 shadow-2xl backdrop-blur-md"
+        ? "bg-sky-900/90 shadow-2xl backdrop-blur-md"
         : "bg-transparent shadow-none"
     }
   `;
 
   // Kelas untuk teks saat scroll, agar tetap kontras
-  const textClasses = scrolled ? "text-white" : "text-blue-900 md:text-white";
+  const textClasses = scrolled ? "text-white" : "text-sky-900 md:text-white";
   const logoClasses = scrolled ? "text-sky-400" : "text-white md:text-sky-400";
 
   return (
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Dropdown) */}
       {isOpen && (
-        <div className="md:hidden bg-blue-900/95 pb-4 transition-all duration-300">
+        <div className="md:hidden bg-sky-900/95 pb-4 transition-all duration-300">
           {[
             { href: "#home", label: "Home" },
             { href: "#about", label: "About" },

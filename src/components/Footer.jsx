@@ -2,9 +2,9 @@ import { Github, Mail, Linkedin, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-white pt-12 pb-8 border-t-4 border-sky-500">
+    <footer className="bg-sky-950 text-white pt-12 pb-8 border-t-4 border-sky-500">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-blue-800 pb-10 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-sky-800 pb-10 mb-8">
           {/* Kolom 1: Branding & Deskripsi Singkat */}
           <div className="col-span-2 md:col-span-1">
             <a
@@ -14,7 +14,7 @@ export default function Footer() {
               <img src="/logo.png" alt="logo" className="w-8 h-8 mr-2" />
               PENGUIN RESING
             </a>
-            <p className="text-blue-200 text-sm">
+            <p className="text-sky-200 text-sm">
               Proyek Remote Control Car IoT
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
             <h5 className="text-xl font-semibold mb-4 border-b-2 border-sky-500 pb-1">
               Navigasi
             </h5>
-            <ul className="space-y-2 text-blue-300">
+            <ul className="space-y-2 text-sky-300">
               <li>
                 <a
                   href="#home"
@@ -65,7 +65,7 @@ export default function Footer() {
             <h5 className="text-xl font-semibold mb-4 border-b-2 border-sky-500 pb-1">
               Hubungi Kami
             </h5>
-            <ul className="space-y-3 text-blue-300">
+            <ul className="space-y-3 text-sky-300">
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-sky-500" />
                 <a
@@ -92,7 +92,7 @@ export default function Footer() {
                 href="https://github.com/proyek-penguin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-300 hover:text-sky-400 transition duration-300"
+                className="text-sky-300 hover:text-sky-400 transition duration-300"
                 aria-label="GitHub Proyek"
               >
                 <Github className="w-7 h-7" />
@@ -101,7 +101,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/proyek-penguin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-300 hover:text-sky-400 transition duration-300"
+                className="text-sky-300 hover:text-sky-400 transition duration-300"
                 aria-label="LinkedIn Proyek"
               >
                 <Linkedin className="w-7 h-7" />
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         {/* Baris Bawah: Copyright */}
-        <div className="text-center md:flex justify-between items-center text-sm text-blue-400">
+        <div className="text-center md:flex justify-between items-center text-sm text-sky-400">
           <p>
             &copy; {new Date().getFullYear()} Tim Penguin Resing. Hak Cipta
             Dilindungi.

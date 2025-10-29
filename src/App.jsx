@@ -3,12 +3,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Members from "./pages/Members";
 import Member from "./pages/Member";
-import Gallery from "./pages/Gallery";
+import Gallerys from "./pages/Gallerys";
 import BackToTopButton from "./components/BackToTopButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Materials from "./pages/Materials";
 
 function App() {
   useEffect(() => {
@@ -27,14 +29,16 @@ function App() {
               <main>
                 <Home />
                 <About />
-                <Member />
-                <Gallery />
+                <Members />
+                <Gallerys />
+                <Materials />
                 <BackToTopButton />
               </main>
               <Footer />
             </>
           }
         />
+        <Route path="/member/:id" element={<Member />} />
       </Routes>
     </div>
   );

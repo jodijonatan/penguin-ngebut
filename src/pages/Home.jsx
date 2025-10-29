@@ -12,7 +12,7 @@ export default function Home() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-blue-900/50 to-blue-800/60 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-sky-950/70 via-sky-900/50 to-sky-800/60 z-0"></div>
 
       {/* Konten Utama */}
       <div className="relative z-10 text-center max-w-4xl p-6 md:p-8">
@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className="text-white text-6xl md:text-7xl lg:text-8xl font-extrabold mb-4 md:mb-5 leading-tight drop-shadow-2xl">
           PENGUIN RESING
         </h1>
-        <p className="text-blue-100 text-2xl md:text-3xl font-light italic mb-8 md:mb-10 max-w-2xl mx-auto">
+        <p className="text-sky-100 text-2xl md:text-3xl font-light italic mb-8 md:mb-10 max-w-2xl mx-auto">
           “Mengemudi Cerdas, Desain Mulus: Kontrol Penuh di Genggaman Anda.”
         </p>
         <a
