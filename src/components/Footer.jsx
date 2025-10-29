@@ -1,4 +1,4 @@
-import { Car, Github, Mail, Linkedin, MapPin } from "lucide-react";
+import { Github, Mail, Linkedin, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
               href="#home"
               className="flex items-center text-3xl font-extrabold text-sky-400 mb-4 hover:text-sky-300 transition duration-300"
             >
-              <Car className="w-8 h-8 mr-2" />
+              <img src="/logo.png" alt="logo" className="w-8 h-8 mr-2" />
               PENGUIN RESING
             </a>
             <p className="text-blue-200 text-sm">

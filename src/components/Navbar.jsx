@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Car, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +58,11 @@ const Navbar = () => {
             href="#home"
             className={`flex items-center text-2xl font-bold transition duration-300 ${logoClasses}`}
           >
-            <Car className="w-6 h-6 mr-2" />
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="size-8 p-1 bg-white rounded-full  mr-2"
+            />
             PENGUIN RESING
           </a>
         </div>
