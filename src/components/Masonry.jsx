@@ -108,22 +108,26 @@ const Masonry = ({
     preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
   }, [items]);
 
-  const grid = useMemo(() => {
-    if (!width) return [];
+  // 🔧 Perbaikan di sini: return juga total height
+  const gridData = useMemo(() => {
+    if (!width) return { items: [], height: 0 };
     const colHeights = new Array(columns).fill(0);
     const gap = 16;
     const totalGaps = (columns - 1) * gap;
     const columnWidth = (width - totalGaps) / columns;
 
-    return items.map((child) => {
+    const layout = items.map((child) => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
-      const height = child.height / 2;
+      const height = child.height; // 🔧 hilangkan "/2"
       const y = colHeights[col];
 
       colHeights[col] += height + gap;
       return { ...child, x, y, w: columnWidth, h: height };
     });
+
+    const maxHeight = Math.max(...colHeights);
+    return { items: layout, height: maxHeight };
   }, [columns, items, width]);
 
   const hasMounted = useRef(false);
@@ -131,7 +135,7 @@ const Masonry = ({
   useLayoutEffect(() => {
     if (!imagesReady) return;
 
-    grid.forEach((item, index) => {
+    gridData.items.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
       const animProps = { x: item.x, y: item.y, width: item.w, height: item.h };
 
@@ -168,7 +172,15 @@ const Masonry = ({
 
     hasMounted.current = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [
+    gridData,
+    imagesReady,
+    stagger,
+    animateFrom,
+    blurToFocus,
+    duration,
+    ease,
+  ]);
 
   const handleMouseEnter = (id, element) => {
     if (scaleOnHover) {
@@ -199,12 +211,17 @@ const Masonry = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full">
-      {grid.map((item) => (
+    // 🔧 Container sekarang punya tinggi sesuai isi
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      style={{ height: gridData.height }}
+    >
+      {gridData.items.map((item) => (
         <div
           key={item.id}
           data-key={item.id}
-          className="absolute box-content"
+          className="absolute box-content overflow-hidden rounded-[10px]"
           style={{ willChange: "transform, width, height, opacity" }}
           onClick={() => window.open(item.url, "_blank", "noopener")}
           onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}

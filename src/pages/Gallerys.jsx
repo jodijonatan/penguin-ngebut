@@ -110,50 +110,62 @@ export default function Gallerys() {
   const items = [
     {
       id: "1",
-      img: "https://picsum.photos/id/1015/600/900?grayscale",
+      img: "desain-banner/desain.jpeg",
       url: "https://example.com/one",
-      height: 400,
+      height: 200,
     },
     {
       id: "2",
-      img: "https://picsum.photos/id/1011/600/750?grayscale",
+      img: "perancangan-mobil/perancangan-mobil4.jpeg",
       url: "https://example.com/two",
-      height: 250,
+      height: 400,
     },
     {
       id: "3",
-      img: "https://picsum.photos/id/1020/600/800?grayscale",
+      img: "perancangan-mobil/perancangan-mobil5.jpeg",
       url: "https://example.com/three",
       height: 300,
     },
     {
       id: "4",
-      img: "https://picsum.photos/id/1024/600/800?grayscale",
+      img: "perancangan-skema/perancangan-skema.jpeg",
       url: "https://example.com/four",
-      height: 600,
-    },
-    {
-      id: "5",
-      img: "https://picsum.photos/id/1027/600/800?grayscale",
-      url: "https://example.com/five",
       height: 500,
     },
     {
+      id: "5",
+      img: "perancangan-skema/perancangan-skema2.jpeg",
+      url: "https://example.com/five",
+      height: 300,
+    },
+    {
       id: "6",
-      img: "https://picsum.photos/id/1031/600/800?grayscale",
+      img: "/team/alltim.jpeg",
       url: "https://example.com/six",
-      height: 400,
+      height: 200,
     },
     {
       id: "7",
-      img: "https://picsum.photos/id/1033/600/800?grayscale",
+      img: "/website-development/website-development.jpeg",
       url: "https://example.com/seven",
-      height: 200,
+      height: 250,
+    },
+    {
+      id: "8",
+      img: "/perancangan-mobil/model-mobil.jpeg",
+      url: "https://example.com/seven",
+      height: 250,
+    },
+    {
+      id: "9",
+      img: "/perancangan-mobil/perancangan-mobil7.jpeg",
+      url: "https://example.com/seven",
+      height: 250,
     },
   ];
 
   return (
-    <section className="p-10 min-h-screen bg-gray-950">
+    <section className="p-4 md:p-10 min-h-screen bg-[url(/elegant-white-background-with-blue-wave-lines.jpg)] bg-cover">
       <Masonry
         items={items}
         ease="power3.out"
@@ -165,6 +177,11 @@ export default function Gallerys() {
         blurToFocus={true}
         colorShiftOnHover={false}
       />
+      <div className="md:flex md:justify-center">
+        <button className="bg-sky-400 text-center text-white py-2 px-4 rounded-full mt-auto hover:bg-sky-500 transition duration-300 block mx-auto cursor-pointer">
+          View More
+        </button>
+      </div>
     </section>
   );
 }
