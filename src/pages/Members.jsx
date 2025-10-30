@@ -41,10 +41,7 @@ const MemberCard = ({ member }) => (
 
 export default function Member() {
   return (
-    <section
-      id="member"
-      className="py-20 md:py-32 bg-[url(elegant-white-background-with-blue-wave-lines.jpg)] bg-cover text-gray-800"
-    >
+    <section id="member" className="py-20 md:py-32 bg-sky-50 text-gray-800">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-extrabold text-sky-900 mb-4">

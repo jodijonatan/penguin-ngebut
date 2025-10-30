@@ -26,10 +26,7 @@ const projectDetails = [
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="py-20 md:py-32 bg-[url(5_123dasa1.jpg)] bg-cover text-gray-800"
-    >
+    <section id="about" className="py-20 md:py-32 bg-gray-50 text-gray-800">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Bagian Judul dan Deskripsi Utama */}
         <div className="text-center mb-16">
@@ -57,22 +54,22 @@ export default function About() {
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Proyek ini tidak hanya tentang membuat mobil bergerak. Ini tentang
               menciptakan antarmuka kontrol yang lancar dan{" "}
-              <span className="font-semibold">real-time </span>
+              <span className="font-semibold">real-time</span>
               menggunakan React dan Tailwind untuk menampilkan telemetri
               langsung dari mobil. Dari daya baterai hingga kecepatan, setiap
               detail terpantau.
             </p>
             <ul className="space-y-3 text-lg text-gray-700">
-              <li className="flex items-center">
-                <span className="text-sky-500 mr-2">✓</span>
+              <li className="flex items-start">
+                <span className="text-sky-500 mr-2 mt-1">✓</span>
                 <span>Kontrol Jarak Jauh Berbasis Web (React)</span>
               </li>
-              <li className="flex items-center">
-                <span className="text-sky-500 mr-2">✓</span>
+              <li className="flex items-start">
+                <span className="text-sky-500 mr-2 mt-1">✓</span>
                 <span>Telemetri Data IoT Real-Time</span>
               </li>
-              <li className="flex items-center">
-                <span className="text-sky-500 mr-2">✓</span>
+              <li className="flex items-start">
+                <span className="text-sky-500 mr-2 mt-1">✓</span>
                 <span>Desain Sasis yang Aerodinamis</span>
               </li>
             </ul>
@@ -86,7 +83,7 @@ export default function About() {
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
             <p className="mt-4 text-center text-sm text-gray-600 italic">
-              All team - Para sigma di balik Penguin Resing
+              Model Remote Control Car - Prototype V1.0
             </p>
           </div>
         </div>

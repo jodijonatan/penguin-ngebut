@@ -12,7 +12,7 @@ export default function Home() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-sky-950/70 via-sky-900/50 to-sky-800/60 z-0"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-sky-950/70 via-sky-900/50 to-sky-800/60 z-0"></div>
 
       {/* Konten Utama */}
       <div className="relative z-10 text-center max-w-4xl p-6 md:p-8">
