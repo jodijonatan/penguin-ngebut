@@ -81,7 +81,7 @@ export default function MemberDetail() {
       <div className="relative md:w-1/2 w-full bg-black md:bg-[url(/bg.png)] bg-cover h-[60vh] md:h-auto flex items-center justify-center">
         {LanyardComponent && (
           <div className="absolute inset-0 z-0">
-            <LanyardComponent position={[0, 0, 20]} gravity={[0, -40, 0]} />
+            <LanyardComponent position={[0, 0, 16]} gravity={[0, -40, 0]} />
           </div>
         )}
       </div>
