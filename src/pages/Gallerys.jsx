@@ -106,11 +106,11 @@
 
 import Masonry from "../components/Masonry";
 import { gallerys } from "../data/gallerys";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 export default function Gallerys() {
   return (
-    <section className="p-4 md:p-10 min-h-screen bg-[url(/elegant-white-background-with-blue-wave-lines.jpg)] bg-cover">
+    <section className="p-4 md:p-10 min-h-screen bg-[url(/gallery-background.jpg)] bg-cover">
       <Masonry
         items={gallerys}
         ease="power3.out"
