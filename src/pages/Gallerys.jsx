@@ -105,69 +105,14 @@
 // }
 
 import Masonry from "../components/Masonry";
+import { gallerys } from "../data/gallerys";
+import { Link } from "react-router-dom"; 
 
 export default function Gallerys() {
-  const items = [
-    {
-      id: "1",
-      img: "desain-banner/desain.jpeg",
-      url: "https://example.com/one",
-      height: 200,
-    },
-    {
-      id: "2",
-      img: "perancangan-mobil/perancangan-mobil4.jpeg",
-      url: "https://example.com/two",
-      height: 400,
-    },
-    {
-      id: "3",
-      img: "perancangan-mobil/perancangan-mobil5.jpeg",
-      url: "https://example.com/three",
-      height: 300,
-    },
-    {
-      id: "4",
-      img: "perancangan-skema/perancangan-skema.jpeg",
-      url: "https://example.com/four",
-      height: 500,
-    },
-    {
-      id: "5",
-      img: "perancangan-skema/perancangan-skema2.jpeg",
-      url: "https://example.com/five",
-      height: 300,
-    },
-    {
-      id: "6",
-      img: "/team/alltim.jpeg",
-      url: "https://example.com/six",
-      height: 200,
-    },
-    {
-      id: "7",
-      img: "/website-development/website-development.jpeg",
-      url: "https://example.com/seven",
-      height: 250,
-    },
-    {
-      id: "8",
-      img: "/perancangan-mobil/model-mobil.jpeg",
-      url: "https://example.com/seven",
-      height: 250,
-    },
-    {
-      id: "9",
-      img: "/perancangan-mobil/perancangan-mobil7.jpeg",
-      url: "https://example.com/seven",
-      height: 250,
-    },
-  ];
-
   return (
     <section className="p-4 md:p-10 min-h-screen bg-[url(/elegant-white-background-with-blue-wave-lines.jpg)] bg-cover">
       <Masonry
-        items={items}
+        items={gallerys}
         ease="power3.out"
         duration={0.6}
         stagger={0.05}
@@ -178,9 +123,12 @@ export default function Gallerys() {
         colorShiftOnHover={false}
       />
       <div className="md:flex md:justify-center">
-        <button className="bg-sky-400 text-center text-white py-2 px-4 rounded-full mt-auto hover:bg-sky-500 transition duration-300 block mx-auto cursor-pointer">
+        <Link
+          to={`/member/`}
+          className="bg-sky-400 text-white py-2 px-4 rounded-full mt-auto hover:bg-sky-500 transition duration-300"
+        >
           View More
-        </button>
+        </Link>
       </div>
     </section>
   );
