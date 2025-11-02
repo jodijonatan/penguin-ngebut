@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { teamMembers } from "../data/members";
+import { member } from "../data/members";
 
 // Komponen Kartu Anggota Tim
 const MemberCard = ({ member }) => (
@@ -16,7 +16,8 @@ const MemberCard = ({ member }) => (
     <h3 className="text-2xl font-bold text-sky-900 mb-1">{member.name}</h3>
     <p className="text-lg font-semibold text-sky-600 mb-4">{member.role}</p>
 
-    {/* <div className="text-left mb-4">
+    {/* 🔹 Info detail — tampil penuh di mobile, tersembunyi di md ke atas */}
+    <div className="block md:hidden text-left mb-4">
       <p className="font-bold text-gray-700 mb-2 border-b pb-1 border-gray-200">
         Tanggung Jawab Utama:
       </p>
@@ -28,11 +29,12 @@ const MemberCard = ({ member }) => (
           </li>
         ))}
       </ul>
-    </div> */}
+    </div>
 
+    {/* 🔹 Tombol hanya muncul di layar sedang ke atas */}
     <Link
       to={`/member/${member.id}`}
-      className="bg-sky-400 text-white py-2 px-4 rounded-full mt-auto hover:bg-sky-500 transition duration-300"
+      className="hidden md:inline-block bg-sky-400 text-white py-2 px-4 rounded-full mt-auto hover:bg-sky-500 transition duration-300"
     >
       View More
     </Link>
@@ -54,7 +56,7 @@ export default function Member() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {teamMembers.map((member, index) => (
+          {member.map((member, index) => (
             <MemberCard key={index} member={member} />
           ))}
         </div>
