@@ -40,6 +40,7 @@ export const teamMembers = [
 export const member = [
   {
     id: 1,
+    firstName: "Brema",
     name: "Brema Akmal",
     role: "IoT Project Manager",
     tasks: ["Koordinasi Proyek", "IoT Hardware Engineer"],
@@ -47,6 +48,7 @@ export const member = [
   },
   {
     id: 2,
+    firstName: "Harry",
     name: "Harry Hutapea",
     role: "Graphic Designer",
     tasks: ["Banner Design", "Inisiator"],
@@ -54,6 +56,7 @@ export const member = [
   },
   {
     id: 3,
+    firstName: "Jodi",
     name: "Jodi Jonatan",
     role: "Creative Technologist",
     tasks: [
@@ -66,6 +69,7 @@ export const member = [
   },
   {
     id: 4,
+    firstName: "Luthfi",
     name: "Luthfii Alfayyadh",
     role: "IoT Hardware Engineer",
     tasks: ["IoT Hardware Engineer", "Banner Design", "Scheme Designer"],
@@ -73,6 +77,7 @@ export const member = [
   },
   {
     id: 5,
+    firstName: "Maleakhi",
     name: "Maleakhi Christian",
     role: "Digital Specialist",
     tasks: [
@@ -85,6 +90,7 @@ export const member = [
   },
   {
     id: 6,
+    firstName: "Vorgiano",
     name: "Vorgiano Pandiangan",
     role: "IoT Hardware Engineer",
     tasks: ["IoT Hardware Engineer"],
