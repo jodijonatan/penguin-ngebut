@@ -35,18 +35,18 @@ export default function MemberDetail() {
   const LanyardComponent = Lanyards[person.firstName?.toLowerCase()];
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row">
-      {/* 🔹 Kiri: gambar + teks di atasnya */}
-      <div className="relative md:w-1/2 w-full h-[70vh] md:h-auto flex items-center justify-center overflow-hidden">
-        {/* Gambar dengan overlay gelap */}
-        <img
-          src={person.gif}
-          alt={person.name}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" /> {/* Overlay gelap */}
-        {/* Teks di atas gambar */}
-        <div className="absolute z-10 p-8 text-white max-w-lg text-left">
+    <section
+      className="min-h-screen flex flex-col md:flex-row relative bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${person.gif})`,
+      }}
+    >
+      {/* 🔹 Overlay gelap di seluruh background */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
+
+      {/* 🔹 Konten kiri */}
+      <div className="relative md:w-1/2 w-full flex flex-col justify-center items-start text-white p-8 z-10">
+        <div className="max-w-lg">
           <h1 className="text-4xl md:text-5xl font-bold mb-3 drop-shadow-lg">
             {person.name}
           </h1>
@@ -77,10 +77,10 @@ export default function MemberDetail() {
         </div>
       </div>
 
-      {/* 🔹 Kanan: lanyard full */}
-      <div className="relative md:w-1/2 w-full bg-black md:bg-[url(/lanyard-background.png)] bg-cover h-[60vh] md:h-auto flex items-center justify-center">
+      {/* 🔹 Lanyard kanan (di atas background yang sama) */}
+      <div className="relative md:w-1/2 w-full h-[60vh] md:h-auto flex items-center justify-center z-10">
         {LanyardComponent && (
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0">
             <LanyardComponent position={[0, 0, 16]} gravity={[0, -40, 0]} />
           </div>
         )}
