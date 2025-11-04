@@ -31,7 +31,7 @@ function App() {
                 <About />
                 <Members />
                 <Gallerys />
-                <Materials />
+                {/* <Materials /> */}
                 <BackToTopButton />
               </main>
               <Footer />

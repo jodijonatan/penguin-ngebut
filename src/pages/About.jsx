@@ -5,7 +5,7 @@ const projectDetails = [
     icon: Zap,
     title: "Teknologi Inti",
     description:
-      "Menggunakan React (Front-end), Node.js/Python (Back-end/Logika IoT), dan ESP32 untuk kontrol perangkat keras yang responsif.",
+      "Menggunakan ESP32 untuk kontrol perangkat keras yang responsif.",
     color: "text-sky-600",
   },
   {
@@ -53,24 +53,22 @@ export default function About() {
             </h3>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Proyek ini tidak hanya tentang membuat mobil bergerak. Ini tentang
-              menciptakan antarmuka kontrol yang lancar dan{" "}
-              <span className="font-semibold">real-time</span>
-              menggunakan React dan Tailwind untuk menampilkan telemetri
-              langsung dari mobil. Dari daya baterai hingga kecepatan, setiap
-              detail terpantau.
+              pengalaman kontrol yang lancar dan{" "}
+              <span className="font-semibold">real-time</span>. Dari daya
+              baterai hingga kecepatan, setiap detail terpantau.
             </p>
             <ul className="space-y-3 text-lg text-gray-700">
-              <li className="flex items-start">
+              <li className="flex items-center">
                 <span className="text-sky-500 mr-2 mt-1">✓</span>
-                <span>Kontrol Jarak Jauh Berbasis Web (React)</span>
+                <span>Kontrol Jarak Jauh Berbasis Aplikasi Mobile</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-center">
                 <span className="text-sky-500 mr-2 mt-1">✓</span>
-                <span>Telemetri Data IoT Real-Time</span>
+                <span>Cepat dan Elegan</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex items-center">
                 <span className="text-sky-500 mr-2 mt-1">✓</span>
-                <span>Desain Sasis yang Aerodinamis</span>
+                <span>Pengalaman Kontrol Yang Mulus</span>
               </li>
             </ul>
           </div>
@@ -83,7 +81,7 @@ export default function About() {
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
             <p className="mt-4 text-center text-sm text-gray-600 italic">
-              Model Remote Control Car - Prototype V1.0
+              Para Penguin Sigma Dibalik RC Car - Penguin Resing
             </p>
           </div>
         </div>
