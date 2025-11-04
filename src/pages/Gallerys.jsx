@@ -16,14 +16,14 @@ export default function Gallerys() {
         blurToFocus={true}
         colorShiftOnHover={false}
       />
-      <div className="md:flex md:justify-center">
+      {/* <div className="md:flex md:justify-center">
         <Link
           to={`/member/`}
           className="bg-sky-400 text-white py-2 px-4 rounded-full mt-auto hover:bg-sky-500 transition duration-300"
         >
           View More
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }
