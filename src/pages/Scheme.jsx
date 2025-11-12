@@ -35,7 +35,7 @@ const Scheme = () => {
             className="w-full rounded-xl shadow-md border border-sky-200"
           />
           <p className="text-center text-gray-500 mt-4 italic">
-            Gambar 1. Skema sistem dan konektivitas Penguin Resing.
+            Skema sistem dan konektivitas Penguin Resing.
           </p>
         </motion.div>
 
