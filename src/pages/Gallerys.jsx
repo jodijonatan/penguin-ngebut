@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function Gallerys() {
   return (
-    <section className="p-4 md:p-10 min-h-screen bg-[url(/gallery-background.jpg)] bg-cover">
+    <section
+      id="gallerys"
+      className="p-4 md:p-10 min-h-screen bg-[url(/gallery-background.jpg)] bg-cover"
+    >
       <Masonry
         items={gallerys}
         ease="power3.out"

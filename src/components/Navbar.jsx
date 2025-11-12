@@ -88,10 +88,16 @@ const Navbar = () => {
             Member
           </a>
           <a
-            href="#gallery"
+            href="#gallerys"
             className={`text-lg font-medium hover:text-sky-400 transition duration-300 ${textClasses}`}
           >
-            Gallery
+            Gallerys
+          </a>
+          <a
+            href="#scheme"
+            className={`text-lg font-medium hover:text-sky-400 transition duration-300 ${textClasses}`}
+          >
+            Scheme
           </a>
         </div>
 
