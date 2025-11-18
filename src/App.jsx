@@ -10,8 +10,9 @@ import BackToTopButton from "./components/BackToTopButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-// import Materials from "./pages/Materials";
+import Materials from "./pages/Materials";
 import Scheme from "./pages/Scheme";
+// import Material from "./pages/Material";
 
 function App() {
   useEffect(() => {
@@ -33,7 +34,7 @@ function App() {
                 <Members />
                 <Gallerys />
                 <Scheme />
-                {/* <Materials /> */}
+                <Materials />
                 <BackToTopButton />
               </main>
               <Footer />
