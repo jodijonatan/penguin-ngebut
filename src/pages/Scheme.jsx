@@ -30,7 +30,7 @@ const Scheme = () => {
           className="bg-white rounded-2xl shadow-2xl p-6 border-t-4 border-sky-400 mb-16"
         >
           <img
-            src="/perancangan-skema/skema3.jpeg" // Ganti sesuai lokasi gambar kamu
+            src="/perancangan-skema/skema.jpeg" // Ganti sesuai lokasi gambar kamu
             alt="Skema Mobil IoT"
             className="w-full rounded-xl shadow-md border border-sky-200"
           />
